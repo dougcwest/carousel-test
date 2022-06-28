@@ -35,7 +35,6 @@ export default Carousel;
 const CarFrame = styled.div`
   width: 100%;
   height 700px;
-  background: #ececec;
   color: antiquewhite;
 
   h4 {
@@ -45,6 +44,14 @@ const CarFrame = styled.div`
   p {
     margin-left: 50px;
     margin-right: 50px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    height: 400px;
+    
+    p {
+      font-size: 14px;
+    }
   }
   `;
 
@@ -80,6 +87,12 @@ const Middle = styled.div`
     margin-top: 48px;
     padding-top: 0;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 36px;
+    }
   }
 `;
 
