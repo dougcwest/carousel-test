@@ -1,20 +1,6 @@
-import React, { useState } from 'react';
-import { images } from './components/helpers/CarouselData';
-import { Parallax } from 'react-parallax';
-import './App.css';
-import { CarFrame, MainContainer, InnerFrame, InsetFrame, Left, Middle, Right } from './components/helpers/CarouselStyles';
-
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import AddLocationAltIcon from '@mui/icons-material/AddLocationAlt';
-
-
-const img1 = "https://i.ibb.co/P6p4M8R/dark-stone-bg.jpg";
-const img2 = "https://imgix.bustle.com/uploads/shutterstock/2022/3/31/ff861ff2-92db-4a04-8452-7557dde82b86-shutterstock-1866343888.jpg?w=2000&h=640&fit=crop&crop=faces&auto=format%2Ccompress";
+import React from 'react';
 
 function App() {
-  const [currentImg, setCurrentImg] = useState(0);
-
   return (
     <body>
       <h1>
