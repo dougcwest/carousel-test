@@ -1,40 +1,68 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-.App {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: #333;
-}
-
-a:link,
-a:visited {
-  color: antiquewhite;
-}
-
-h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 60px;
-  color: antiquewhite;
-  padding-top: 48px;
-}
-
-h4 {
-  font-size: 20px;
+@font-face {
+  font-family: "conthrax-sb";
+  src: local("conthrax-sb"), url(./fonts/conthrax-sb.ttf) format("truetype");
 }
 
 body {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "conthrax-sb";
+  background: #0e0e0e;
+}
+
+@keyframes rollout {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: white;
+  letter-spacing: 15px;
+  position: relative;
+  margin: 0;
+  font-size: 60px;
+  height: 75px;
+  overflow: hidden;
+}
+
+h1 span {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  transition-timing-function: ease-in-out;
+  animation: shuffle steps(16) 1.5s;
+}
+
+h1:hover span {
+  animation: shuffle steps(16) 1.5s infinite;
+}
+
+@keyframes shuffle {
+  0% {
+    transform: translateY();
+  }
+  100% {
+    transform: translateY(-1200px);
+  }
 }
 
 @media only screen and (max-width: 600px) {
-  .App {
+  body {
     text-align: center;
   }
   h1 {
